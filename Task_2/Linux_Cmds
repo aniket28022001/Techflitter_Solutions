@@ -1,1 +1,7 @@
 minikube start --nodes=2
+
+
+kubectl apply -f frontend-deployment.yaml
+kubectl apply -f frontend-service.yaml
+kubectl apply -f mysql-deployment.yaml
+kubectl apply -f pvc-mysql.yaml
