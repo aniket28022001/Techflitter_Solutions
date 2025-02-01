@@ -1,0 +1,13 @@
+- name: Configure LAMP Stack
+  hosts: all
+  become: yes
+  tasks:
+    - name: Install Nginx, MySQL, and PHP
+      apt:
+        name: "{{ item }}"
+        state: present
+      with_items:
+        - nginx
+        - php
+        - mysql-server
+        - php-mysql
